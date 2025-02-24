@@ -3,7 +3,7 @@ import { observer } from "../whtch";
 
 import todoStore, { Todo } from "../store/TodoStore";
 import { FC } from "react";
-function TodoList() {
+function TodoList(props: { todoList: string }) {
   const addNewTodo = () => {
     todoStore.addTodo(prompt("输入新的待办任务", "来杯水") as string);
   };
@@ -52,4 +52,6 @@ const TodoView = observer(({ todo, index }: TodoViewProps) => {
     </li>
   );
 });
+
+TodoList.displayName = "TodoList";
 export default observer(TodoList);
