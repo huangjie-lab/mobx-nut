@@ -1,8 +1,8 @@
 import {
-  action,
-  makeAutoObservable,
-  makeObservable,
-  observable,
+  // action,
+  // makeAutoObservable,
+  // makeObservable,
+  // observable,
   computed,
   Reaction,
 } from "mobx";
@@ -16,6 +16,13 @@ import {
   MobXProviderContext,
   inject,
 } from "./nut-mobx-react";
+
+import {
+  observable,
+  makeObservable,
+  action,
+  makeAutoObservable,
+} from "./nut-mobx";
 
 export {
   action,
